@@ -2,6 +2,8 @@
 const { docopt } = require('docopt');
 const generate = require('../lib/generate');
 
+const POSTGRESQL_DEFAULT_PORT = 5432;
+
 const doc = `
 Generates io-ts contracts from postgresql database schema.
 
@@ -22,7 +24,7 @@ Options:
 
 const {
   '--host': hostname,
-  '--port': port,
+  '--port': port = POSTGRESQL_DEFAULT_PORT,
   '--username': username,
   '--password': password,
   '--database': database,
