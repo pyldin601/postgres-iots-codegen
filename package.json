@@ -6,7 +6,7 @@
     "pgiotsgen": "./bin/pgiotsgen.js"
   },
   "scripts": {
-    "lint": "eslint src bin",
+    "lint": "eslint lib bin",
     "test": "exit 0",
     "prepublish": "npm run lint && npm run test"
   },
