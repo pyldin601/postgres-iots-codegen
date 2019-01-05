@@ -1,0 +1,27 @@
+{
+  "name": "postgres-iots-codegen",
+  "version": "0.1.0",
+  "description": "Generates io-ts contracts from postgresql database schema.",
+  "bin": {
+    "pgiotsgen": "./bin/pgiotsgen.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pldin601/postgres-iots-codegen.git"
+  },
+  "keywords": [],
+  "author": "Roman Lakhtadyr <roman.lakhtadyr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pldin601/postgres-iots-codegen/issues"
+  },
+  "homepage": "https://github.com/pldin601/postgres-iots-codegen#readme",
+  "dependencies": {
+    "docopt": "^0.6.2",
+    "knex": "^0.16.3",
+    "pg": "^7.7.1"
+  }
+}
