@@ -3,7 +3,7 @@ Command line utility that generates io-ts contracts from postgresql database sch
 
 ## How to use
 Type in your console `npx pgiotsgen --help` to get help:
-```shell
+```text
 Generates io-ts contracts from postgresql database schema.
 
 Usage:
