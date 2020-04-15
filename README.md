@@ -7,7 +7,7 @@ Type in your console `npx pgiotsgen --help` to get help:
 Generates io-ts contracts from postgresql database schema.
 
 Usage:
-  pgiotsgen --host=<host> [--port=<port>] --username=<username> --password=<password> --database=<database> --outdir=<outdir> [--index]
+  pgiotsgen --host=<host> [--port=<port>] --username=<username> --password=<password> --database=<database> --outdir=<outdir> [--capital] [--nosuffix] [--index] [--ignore=<tables>]
   pgiotsgen --help
 
 Options:
@@ -19,6 +19,9 @@ Options:
   -d --database=<database>    Database name to connect to.
   -o --outdir=<outdir>        Directory to generate contracts to.
   -i --index                  Also generate root index.ts file for generated contracts.
+  -c --capital                Name contract files with a capital letter.
+  -s --nosuffix               Don't append contract file names with "Contract" suffix.
+  -t --ignore=<tables>        Comma separated list of tables that should be ignored.
   ```
 
 ## Example of produced contract file
