@@ -1,6 +1,6 @@
 {
   "name": "postgres-iots-codegen",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Generates io-ts contracts from postgresql database schema.",
   "bin": {
     "pgiotsgen": "./bin/pgiotsgen.js"
