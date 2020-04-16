@@ -8,7 +8,7 @@ const doc = `
 Generates io-ts contracts from postgresql database schema.
 
 Usage:
-  pgiotsgen --host=<host> [--port=<port>] --username=<username> --password=<password> --database=<database> --outdir=<outdir> [--capital] [--nosuffix] [--index] [--ignore=<tables>]
+  pgiotsgen --host=<host> [--port=<port>] --username=<username> --password=<password> --database=<database> --outdir=<outdir> [--capital] [--nosuffix] [--index] [--ignore=<tables>] [--enum]
   pgiotsgen --help
 
 Options:
@@ -23,6 +23,7 @@ Options:
   -c --capital                Name contract files with a capital letter.
   -s --nosuffix               Don't append contract file names with "Contract" suffix.
   -t --ignore=<tables>        Comma separated list of tables that should be ignored.
+  -e --enum                   Create enum with table names inside the index file (if --index specified)
 `;
 
 const {
@@ -36,6 +37,7 @@ const {
   '--capital': capitalLetter,
   '--nosuffix': noSuffix,
   '--ignore': rawListOfIgnoredTables,
+  '--enum': createEnum,
 } = docopt(doc);
 
 const listOfIgnoredTables = rawListOfIgnoredTables ? rawListOfIgnoredTables.split(',') : [];
@@ -51,6 +53,7 @@ generate(
   capitalLetter,
   noSuffix,
   listOfIgnoredTables,
+  createEnum,
 ).then(
   () => {
     process.exit(0);
